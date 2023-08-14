@@ -1,0 +1,464 @@
+:root {
+  --blue1: #778996;
+  --blue2: #a4b0be;
+  --blue3: #bac8d8;
+  --blue4: #ccd1d7;
+  --blue5: #e5e8ea;
+
+  --light-tan: #ede7df;
+
+  --red1: #bf847a;
+  --red2: #e1c2bd;
+
+  --gray1: #3a3b3d;
+  --gray2: #525457;
+  --gray3: #75787c;
+  --gray4: #a5a9ae;
+  --gray5: #d2d2d2;
+  --gray6: #f2f2f2;
+  --white: #ffffff;
+
+  background-color: var(--white);
+}
+
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=lora);
+
+/*basic reset*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  /* background: var(--blue1); /* fallback for old browsers */
+  /* background: -webkit-linear-gradient(
+    to left,
+    #0441a5,
+    #2a0845
+  ); Chrome 10-25, Safari 5.1-6 */
+}
+
+body {
+  /* height: 100%; */
+  font-family: lora, arial, verdana;
+}
+
+/* This is to stop mobile drag refresh */
+html,
+body {
+  overscroll-behavior-y: contain;
+}
+
+.max-width {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.loading:not(.hidden) {
+  margin-top: 4rem;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.loader {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 20%;
+  position: relative;
+  border: 10px solid var(--blue1);
+  top: 50%;
+  animation: loader 4000ms infinite;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* end loading */
+
+/*form styles*/
+#msform {
+  text-align: center;
+  position: relative;
+}
+
+#msform fieldset {
+  background: var(--white);
+  border: 0 none;
+  border-radius: 0px;
+  /* box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4); */
+  /* padding: 20px 30px; */
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+
+  /*stacking fieldsets above each other*/
+  position: relative;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+
+/*inputs*/
+#msform input,
+#msform textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: lora;
+  color: #2c3e50;
+  font-size: 16px;
+}
+
+#msform input:focus,
+#msform textarea:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid var(--blue1);
+  outline-width: 0;
+  transition: All 0.5s ease-in;
+  -webkit-transition: All 0.5s ease-in;
+  -moz-transition: All 0.5s ease-in;
+  -o-transition: All 0.5s ease-in;
+}
+
+/*buttons*/
+#msform .action-button {
+  width: 100px;
+  background: var(--blue1);
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+  margin-top: 4rem;
+}
+
+#msform .text-required .action-button {
+  margin-top: 0;
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px var(--gray2);
+}
+
+#msform .action-button:disabled:hover,
+#msform .action-button:disabled:focus {
+  box-shadow: none;
+}
+
+#msform .action-button-previous {
+  width: 100px;
+  background: var(--blue3);
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #c5c5f1;
+}
+
+/*headings*/
+.fs-title {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/*progressbar*/
+#progressbar {
+  margin-bottom: 1rem;
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+}
+
+#progressbar li {
+  list-style-type: none;
+  color: var(--gray1);
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 50%;
+  float: left;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+#progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 24px;
+  height: 24px;
+  line-height: 26px;
+  display: block;
+  font-size: 12px;
+  color: #333;
+  background: white;
+  border-radius: 25px;
+  margin: 0 auto 10px auto;
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1; /*put it behind the numbers*/
+}
+
+#progressbar li:first-child:after {
+  /*connector not needed before the first step*/
+  content: none;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,
+#progressbar li.active:after {
+  background: var(--blue1);
+  color: white;
+}
+
+/* Not relevant to this form */
+.dme_link {
+  margin-top: 30px;
+  text-align: center;
+}
+.dme_link a {
+  background: #fff;
+  font-weight: bold;
+  color: #ee0979;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 5px 25px;
+  font-size: 12px;
+}
+
+.dme_link a:hover,
+.dme_link a:focus {
+  background: #c5c5f1;
+  text-decoration: none;
+}
+
+/* Style for the fieldset */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  padding: 0.5rem 0;
+  border-radius: 4px;
+  border: 2px solid #ccc;
+
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type="checkbox"]:checked + label,
+input[type="radio"]:checked + label {
+  background-color: var(--blue1);
+  color: #fff;
+  border-color: var(--blue1);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  /* Firefox */
+}
+
+textarea {
+  resize: none;
+  height: 10rem;
+}
+
+label span {
+  padding: 0 0.75rem;
+}
+
+/* grid stuff */
+.two-column-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.two-column-grid div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.two-column-grid input[type="checkbox"] + label,
+.two-column-grid input[type="radio"] + label {
+  height: 100%;
+}
+
+/* #slider-labels1 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+#slider-labels1 label {
+  text-align: center;
+  white-space: nowrap;
+}
+*/
+/* Change the background color of the slider track */
+/* input[type="range"] {
+  width: 100%;
+  height: 1px;
+  background-color: var(--red1); /* Change this color */
+/*  outline: none;
+}  */
+
+/* Style for the Next button */
+.action-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.action-button:hover {
+  background-color: #0069d9;
+}
+
+/* success page */
+.wide {
+  width: 80%;
+  height: 80%;
+}
+
+.success-body {
+  /* background-color: var(--blue1); */
+  display: flex;
+  margin-top: 4rem;
+  justify-content: center;
+}
+
+.success-message {
+  /* background-color: var(--white); */
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  /* box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); */
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: var(--blue1);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+#msform .action-button:disabled {
+  background-color: var(--gray5);
+}
+
+/* For bad inputs in text fields */
+.error {
+  background-color: var(--red2);
+  font-size: 12px;
+  margin-top: 0.5rem;
+}
+
+.no-link-display {
+  text-decoration: none;
+  color: var(--white);
+}
+
+/* #msform .submit:disabled {
+  background-color: var(--gray5);
+}
+
+#msform .submit:hover:disabled, #msform .submit:focus:disabled {
+  box-shadow: none;
+} */

@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+
+<!-- Created by JJ Stephens May 2023 -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bellu Labs Survey">
+    <title>Bellu Survey</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/form.js"></script>
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <!-- MultiStep Form -->
+<div class="row">
+    <div class="col-md-6 col-md-offset-3 max-width">
+        <form id="msform" method="POST" action="https://script.google.com/macros/s/AKfycbw9F4U_l_jsb9dlASUBtkKvMeGGe5LHkD22qjN-4nxlnIR16BIDqr_WFoBAWrbOG4HC/exec">
+            <!-- progressbar -->
+            <!-- <ul id="progressbar">
+                <li class="active">Hair and Scalp</li>
+                <li>Lifestyle</li>
+                <li>History</li>
+                <li>Goals and Preferences</li>
+            </ul> -->
+            <!-- fieldsets -->
+            <fieldset>
+                <h2 class="fs-title">I would like my hair to be:</h2>
+                <h3 class="fs-subtitle">(Select all that apply)</h3>
+
+                <div class="two-column-grid">
+                    <div>
+                        <input type="checkbox" id="smoother" name="q1" value="Smoother">
+                        <label for="smoother">
+                            <span>Smoother</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="curlier" name="q1" value="Curlier">
+                        <label for="curlier">
+                            <span>Curlier</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="less-frizzy" name="q1" value="Less frizzy">
+                        <label for="less-frizzy">
+                            <span>Less frizzy</span>
+                        </label>
+                    </div> 
+                    <div>
+                        <input type="checkbox" id="longer" name="q1" value="Longer">
+                        <label for="longer">
+                            <span>Longer</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="less-dry" name="q1" value="Less dry">
+                        <label for="less-dry">
+                            <span>Less dry</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="less-greasy" name="q1" value="Less greasy">
+                        <label for="less-greasy">
+                            <span>Less greasy</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="less-split-ends" name="q1" value="Less prone to split ends">
+                        <label for="less-split-ends">
+                            <span>Less prone to split ends</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="more-voluminous" name="q1" value="More voluminous">
+                        <label for="more-voluminous">
+                            <span>More voluminous</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="healthier" name="q1" value="Healthier overall">
+                        <label for="healthier">
+                            <span>Healthier</span>
+                        </label>
+                    </div>
+                </div>
+
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Select the hair type that most closely resembles your hair:</h2>
+                <input type="radio" id="straight" name="q2" value="Straight">
+                <label for="straight">Straight</label><br>
+                <input type="radio" id="wavy" name="q2" value="Wavy">
+                <label for="wavy">Wavy</label><br>
+                <input type="radio" id="curly" name="q2" value="Curly">
+                <label for="curly">Curly</label><br>
+                <input type="radio" id="coily" name="q2" value="Coily">
+                <label for="coily">Coily</label><br>
+
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            
+            <fieldset>
+                <h2 class="fs-title">In general, your scalp is:</h2>
+                <input type="radio" id="greasy1" name="q3" value="Greasy">
+                <label for="greasy1">Greasy</label><br>
+                <input type="radio" id="normal1" name="q3" value="Average">
+                <label for="normal1">Normal</label><br>
+                <input type="radio" id="dry1" name="q3" value="Dry">
+                <label for="dry1">Dry</label><br>
+
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+        
+            <fieldset>
+                <h2 class="fs-title">In general, your hair is:</h2>
+                <input type="radio" id="greasy2" name="q4" value="Greasy">
+                <label for="greasy2">Greasy</label><br>
+                <input type="radio" id="normal2" name="q4" value="Average">
+                <label for="normal2">Normal</label><br>
+                <input type="radio" id="dry2" name="q4" value="Dry">
+                <label for="dry2">Dry</label><br>
+
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            
+            <fieldset>
+                <h2 class="fs-title">Your hair is:</h2>
+                <input type="radio" id="never-frizzy" name="q5" value="Never frizzy">
+                <label for="never-frizzy">Never frizzy</label><br>
+                <input type="radio" id="sometimes-frizzy" name="q5" value="Frizzy some of the time">
+                <label for="sometimes-frizzy">Frizzy some of the time</label><br>
+                <input type="radio" id="mostly-frizzy" name="q5" value="Frizzy most of the time">
+                <label for="mostly-frizzy">Frizzy most of the time</label><br>
+
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">How thick is your hair?</h2>
+                <h3 class="fs-subtitle">Rub a single strand between your fingers. What does it feel like?</h3>
+                <input type="radio" id="very-fine" name="q6" value="1">
+                <label for="very-fine">Very fine</label><br>
+                <input type="radio" id="fine" name="q6" value="2">
+                <label for="fine">Fine</label><br>
+                <input type="radio" id="normal" name="q6" value="3">
+                <label for="normal">Normal</label><br>
+                <input type="radio" id="coarse" name="q6" value="4">
+                <label for="coarse">Coarse</label><br>
+                <input type="radio" id="very-coarse" name="q6" value="5">
+                <label for="very-coarse">Very coarse</label><br>
+                
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">How long does it take your hair to air dry?</h2>
+                <input type="radio" id="lessthan2hour" name="q7" value="Less than 2 hours">
+                <label for="lessthan2hour">Less than 2 hours</label><br>
+                <input type="radio" id="morethan2hour" name="q7" value="More than 2 hours">
+                <label for="morethan2hour">More than 2 hours</label><br>
+                
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">How long is your hair?</h2>
+                <input type="radio" id="shorter2" name="q8" value="Shorter than shoulder-length">
+                <label for="shorter2">Shorter than shoulder-length</label><br>
+                <input type="radio" id="shoulder2" name="q8" value="About shoulder-length">
+                <label for="shoulder2">About shoulder-length</label><br>
+                <input type="radio" id="longer2" name="q8" value="Longer than shoulder-length">
+                <label for="longer2">Longer than shoulder-length</label><br>
+
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">How much does your hair grow in one month?</h2>
+                <input type="radio" id="lessthanhalfinch" name="q9" value="Less than ½ inch">
+                <label for="lessthanhalfinch">Less than half an inch</label><br>
+                <input type="radio" id="halfinch" name="q9" value="About ½ inch">
+                <label for="halfinch">About half an inch</label><br>
+                <input type="radio" id="morethanhalfinch" name="q9" value="More than ½ inch">
+                <label for="morethanhalfinch">More than half an inch</label><br>
+                <input type="radio" id="unsure" name="q9" value="Not sure">
+                <label for="unsure">I'm not sure</label><br>
+
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next-section action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Have you ever had chemical services done to your hair?</h2>
+                <h3 class="fs-subtitle">This includes coloring, bleaching, perming, coloring, and hair relaxing.</h3>
+                <input type="radio" id="yes1" name="q10" value="Yes">
+                <label for="yes1">Yes</label><br>
+                <input type="radio" id="no1" name="q10" value="No">
+                <label for="no1">No</label><br>
+
+                <input type="button" name="previous" class="previous-section action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">How often do you bleach your hair?</h2>
+                <input type="radio" id="frequently1" name="q11" value="At least once per month">
+                <label for="frequently1">At least once a month</label><br>
+                <input type="radio" id="sometimes1" name="q11" value="Every 2-3 months">
+                <label for="sometimes1">Every 2-3 months</label><br>
+                <input type="radio" id="rarely1" name="q11" value="2 or 3 times per year">
+                <label for="rarely1">2-3 times per year</label><br>
+                <input type="radio" id="very-rarely1" name="q11" value="Once per year or less">
+                <label for="very-rarely1">Once per year or less</label><br>
+                <input type="radio" id="never1" name="q11" value="I don't bleach my hair">
+                <label for="never1">Never</label><br>
+
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">How often do you color your hair?</h2>
+                <input type="radio" id="frequently2" name="q12" value="At least once per month">
+                <label for="frequently2">At least once a month</label><br>
+                <input type="radio" id="sometimes2" name="q12" value="Every 2-3 months">
+                <label for="sometimes2">Every 2-3 months</label><br>
+                <input type="radio" id="rarely2" name="q12" value="2 or 3 times per year">
+                <label for="rarely2">2-3 times per year</label><br>
+                <input type="radio" id="very-rarely2" name="q12" value="Once per year or less">
+                <label for="very-rarely2">Once per year or less</label><br>
+                <input type="radio" id="never2" name="q12" value="I don't color my hair">
+                <label for="never2">Never</label><br>
+
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">How often do you use heat on your hair?</h2>
+                <h3 class="fs-subtitle">This includes blow-drying, curling irons, curling wands, and straighteners.</h3>
+
+                <div class="two-column-grid">
+                    <div>
+                        <input type="radio" id="daily" name="q13" value="Every day">
+                        <label for="daily">
+                            <span>Daily</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" id="frequent-week" name="q13" value="Several times per week">
+                        <label for="frequent-week">
+                            <span>Several times per week</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" id="weekly" name="q13" value="About once per week">
+                        <label for="weekly">
+                            <span>About once per week</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" id="frequent-month" name="q13" value="A few times per month">
+                        <label for="frequent-month">
+                            <span>A few times per month</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" id="monthly" name="q13" value="No more than once per month">
+                        <label for="monthly">
+                            <span>No more than once per month</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" id="never3" name="q13" value="Never">
+                        <label for="never3">
+                            <span>Never</span>
+                        </label>
+                    </div>
+                </div>
+
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Which of the following products do you use regularly?</h2>
+                <h3 class="fs-subtitle">Select all that apply.</h3>
+                <div class="two-column-grid">
+                    <div>
+                        <input type="checkbox" id="shampoo" name="q14" value="Shampoo">
+                        <label for="shampoo">
+                            <span>Shampoo</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="conditioner" name="q14" value="Conditioner">
+                        <label for="conditioner">
+                            <span>Conditioner</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="heat-protectants" name="q14" value="Heat protectants">
+                        <label for="heat-protectants">
+                            <span>Heat protectants</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="clays-pastes" name="q14" value="Clays or pastes">
+                        <label for="clays-pastes">
+                            <span>Clays or pastes</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="gel" name="q14" value="Gel">
+                        <label for="gel">
+                            <span>Gel</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="creams" name="q14" value="Creams">
+                        <label for="creams">
+                            <span>Creams</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="hairspray" name="q14" value="Hairspray">
+                        <label for="hairspray">
+                            <span>Hairspray</span>
+                        </label>
+                    </div>
+                </div>
+
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">How often do you submerge your hair in a chlorinated pool?</h2>
+
+                <input type="radio" id="frequently3" name="q15" value="Multiple times per month">
+                <label for="frequently3">Multiple times a month</label><br>
+                <input type="radio" id="sometimes3" name="q15" value="About once per month">
+                <label for="sometimes3">About once a month</label><br>
+                <input type="radio" id="rarely3" name="q15" value="Less than 3 times per year">
+                <label for="rarely3">Less than 3 times per year</label><br>
+                
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Do you take precautions to prevent chlorine exposure when swimming?</h2>
+                <h3 class="fs-subtitle">This includes wearing a swim cap or using leave-in conditioner.</h3>
+
+                <input type="radio" id="yes2" name="q16" value="Yes">
+                <label for="yes2">Yes</label><br>
+                <input type="radio" id="no2" name="q16" value="No">
+                <label for="no2">No</label><br>
+
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">How often do you wash your hair?</h2>
+
+                <input type="radio" id="daily8" name="q17" value="Daily">
+                <label for="daily8">Daily</label><br>
+                <input type="radio" id="frequent-week8" name="q17" value="2-3 times per week">
+                <label for="frequent-week8">Several times per week</label><br>
+                <input type="radio" id="weekly8" name="q17" value="Once per week">
+                <label for="weekly8">Once a week</label><br>
+                <input type="radio" id="lessthanweekly8" name="q17" value="Less than once per week">
+                <label for="lessthanweekly8">Less than once a week</label><br>
+
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">How soon after shampooing does your hair become greasy?</h2>
+
+                <input type="radio" id="day-1" name="q18" value="1 day">
+                <label for="day-1">Within a day</label><br>
+                <input type="radio" id="day-2" name="q18" value="1-2 days">
+                <label for="day-2">Within 2 days</label><br>
+                <input type="radio" id="day-3" name="q18" value="3 days">
+                <label for="day-3">3 days or more</label><br>
+                <input type="radio" id="never" name="q18" value="It never gets greasy">
+                <label for="never">It never gets greasy</label><br>
+
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">How often do you wear your hair in tight styles?</h2>
+                
+                <input type="radio" id="frequently4" name="q19" value="More than 3 times per week">
+                <label for="frequently4">More than 3 times a week</label><br>
+                <input type="radio" id="sometimes4" name="q19" value="Less than 3 times per week">
+                <label for="sometimes4">Less than 3 times a week</label><br>
+                <input type="radio" id="never4" name="q19" value="Never">
+                <label for="never4">Never</label><br>
+
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+
+            <fieldset>
+                <h2 class="fs-title">Number of hours spent outside per day:</h2>
+                <div class="two-column-grid">
+                    <div>
+                        <input type="radio" id="hours-outside0" name="q20" value="0">
+                        <label for="hours-outside0">
+                            <span>0</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" id="hours-outside1" name="q20" value="1">
+                        <label for="hours-outside1">
+                            <span>1</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" id="hours-outside2" name="q20" value="2">
+                        <label for="hours-outside2">
+                            <span>2</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" id="hours-outside3" name="q20" value="3">
+                        <label for="hours-outside3">
+                            <span>3</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" id="hours-outside4" name="q20" value="4">
+                        <label for="hours-outside4">
+                            <span>4</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" id="hours-outside5" name="q20" value="5">
+                        <label for="hours-outside5">    
+                            <span>5</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" id="hours-outside6" name="q20" value="6">
+                        <label for="hours-outside6">
+                            <span>6</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" id="hours-outside7" name="q20" value="7">
+                        <label for="hours-outside7">
+                            <span>7</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" id="hours-outside8" name="q20" value="8">
+                        <label for="hours-outside8">
+                            <span>8</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" id="hours-outside9" name="q20" value="9">
+                        <label for="hours-outside9">
+                            <span>9</span>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" id="hours-outside10" name="q20" value="10">
+                        <label for="hours-outside10">
+                            <span>10+</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+
+            <fieldset>
+                <h2 class="fs-title">How often do you exercise?</h2>
+
+                <input type="radio" id="daily2" name="q21" value="Daily">
+                <label for="daily2">Daily</label><br>
+                <input type="radio" id="frequent-week2" name="q21" value="3-5 times per week">
+                <label for="frequent-week2">3-5 times per week</label><br>
+                <input type="radio" id="weekly2" name="q21" value="1-2 times per week">
+                <label for="weekly2">1-2 times per week</label><br>
+                <input type="radio" id="lessthanweekly2" name="q21" value="Never">
+                <label for="lessthanweekly2">Less than once a week</label><br>
+
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+
+            <fieldset>
+                <h2 class="fs-title">How greasy is your hair after exercising?</h2>
+
+                <input type="radio" id="greasy3" name="q22" value="Greasy">
+                <label for="greasy3">Greasy</label><br>
+                <input type="radio" id="not-greasy3" name="q22" value="Not greasy">
+                <label for="not-greasy3">Not greasy</label><br>
+                <input type="radio" id="unsure3" name="q22" value="Other / not sure">
+                <label for="unsure3">Other/Unsure</label><br>
+
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+
+            <fieldset>
+                <h2 class="fs-title">How would you describe your diet?</h2>
+
+                <input type="radio" id="healthy1" name="q23" value="Healthy">
+                <label for="healthy1">Healthy</label><br>
+                <input type="radio" id="moderate1" name="q23" value="Moderate">
+                <label for="moderate1">Moderate</label><br>
+                <input type="radio" id="unhealthy1" name="q23" value="Unhealthy">
+                <label for="unhealthy1">Unhealthy</label><br>
+
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+
+            <fieldset>
+                <h2 class="fs-title">Are you currently taking any supplements or medications?</h2>
+
+                <input type="radio" id="yes4" name="q24" value="Yes">
+                <label for="yes4">Yes</label><br>
+                <input type="radio" id="no4" name="q24" value="No">
+                <label for="no4">No</label><br>
+
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            
+            <fieldset class="text-required">
+                <h2 class="fs-title">Contact Information</h2>
+
+                <input type="email" name="Email" placeholder="Email" style="appearance:none;" required/>
+                <input type="text" name="First Name" placeholder="First Name" required/>
+                <input type="text" name="Last Name" placeholder="Last Name" required/>
+                <input type="tel" name="Phone Number" placeholder="Phone Number" inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')" required/>
+                <input type="number" name="Age" placeholder="Age" inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')" required/>
+                <input type="number" name="Zip Code" placeholder="Zip Code" inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')" required/>
+
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset class="optional">
+                <h2 class="fs-title">Is there anything else we should know about your hair?</h2>
+                <h3 class="fs-subtitle">Tell us about your specific hair needs.</h3>
+                <textarea name="Is there anything else you would like us to know about your hair?" placeholder=""></textarea>
+                
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Do you have feedback for us?</h2>
+                <h3 class="fs-subtitle">Let us know how we can improve.</h3>
+                <textarea name="Feedback" placeholder=""></textarea>
+                
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="submit" name="submit" class="submit action-button" value="Submit"/>
+            </fieldset>
+        </form>
+        <div class="center-content">
+            <div class="loading hidden">
+                <span class="loader"><span class="loader-inner"></span></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.MultiStep Form -->
+</body>
+
+<script>
+    clearForm();
+    var scriptURL = "https://script.google.com/macros/s/AKfycbyVOMJ7NRexjxppJtVdFYpI9f4t1wWjfd1View8vyzd18AwW--4gxUHDokQ-PB6-R5BzQ/exec";
+    const form = document.forms[0]
+    const loading = document.querySelector('.loading')
+
+    // disable all next buttons
+    let nextButtons = document.querySelectorAll('.next, .next-section');
+    for (let i = 0; i < nextButtons.length; i++) {
+        nextButtons[i].disabled = true;
+    }
+
+    let fieldsets = document.querySelectorAll('fieldset');
+    for (let i = 0; i < fieldsets.length; i++) {
+        if (fieldsets[i].classList.contains('optional')) {
+            // console.log(i + " is optional");
+            // console.log(nextButtons[i]);
+            nextButtons[i].disabled = false;
+        }
+    }
+
+    form.addEventListener("input", e => {
+        // enable the next button
+        let parentFieldSet = e.target.parentElement.closest("fieldset");
+
+        const em = "example@example.com";
+        const isValid = validateEmail(em);
+        // console.log(isValid);
+        
+        // if the parent fieldset has a required input that is empty, disable the next button
+        if (parentFieldSet.classList.contains('text-required')) {
+            
+            let email = parentFieldSet.querySelector('input[type="email"]');
+            let firstName = parentFieldSet.querySelector('input[name="First Name"]');
+            let lastName = parentFieldSet.querySelector('input[name="Last Name"]');
+            let phoneNumber = parentFieldSet.querySelector('input[name="Phone Number"]');
+            let age = parentFieldSet.querySelector('input[name="Age"]');
+            let zipCode = parentFieldSet.querySelector('input[name="Zip Code"]');
+            
+            if (validateEmail(email.value) || email.value == "") {
+                email.classList.remove('error');
+            }
+            else {
+                email.classList.add('error');
+            }
+            
+            if (validateAge(age.value) || age.value == "") {
+                age.classList.remove('error');
+            }
+            else {
+                age.classList.add('error');
+            }
+
+            if (validateZipCode(zipCode.value) || zipCode.value == "") {
+                zipCode.classList.remove('error');
+            }
+            else {
+                zipCode.classList.add('error');
+            }
+
+            // check if all required fields are filled
+            if (email.value == "" || firstName.value == "" || lastName.value == "" || phoneNumber.value == "" || age.value == "" || zipCode.value == "") {
+                let currentNextButton = parentFieldSet.querySelector('.next');
+                currentNextButton.disabled = true;
+            }
+            else {
+                let currentNextButton = parentFieldSet.querySelector('.next');
+                currentNextButton.disabled = false;
+            }
+        }
+        else {
+            let currentNextButton = parentFieldSet.querySelector('.next');
+            if (currentNextButton == null) {
+                // must be a new section
+                currentNextButton = parentFieldSet.querySelector('.next-section');
+            }
+            if (currentNextButton == null) {
+                // must be submitting time
+                // console.log("here");
+                // currentNextButton = parentFieldSet.querySelector('.submit');
+            }
+            currentNextButton.disabled = false;
+        }
+    });
+
+    form.addEventListener("submit", e => {
+        // console.log("attempting to submit");
+        var formData = $("form").serializeArray();
+        
+        e.preventDefault();
+        form.classList.add('hidden');
+        loading.classList.remove('hidden');
+
+        let fd = new FormData(form);
+        // console.log(fd);
+
+        /* If more than one checkbox is selected, the form will have multiple keys 
+            (checkbox name). Only the first checkbox value would be entered into 
+            Google Sheets. 
+            To get around this, concat all the selected checkbox values into a single 
+            string and send that value */
+
+        // grab all the selected values stored as key/value pairs of checkboxName/value
+        
+        let questionMap = new Map();
+        questionMap.set("q1", "Hair Goals");
+        questionMap.set("q2", "Select the hair type that most closely resembles your hair.");
+        questionMap.set("q3", "In general, your scalp is:");
+        questionMap.set("q4", "In general, your hair is:");
+        questionMap.set("q5", "Your hair is:");
+        questionMap.set("q6", "How thick is your hair? Rub a single strand of hair between your fingers. What does it feel like?");
+        questionMap.set("q7", "How long does it take for your hair to air dry?");
+        questionMap.set("q8", "How long is your hair?");
+        questionMap.set("q9", "On average, how much does your hair grow in one month?");
+        questionMap.set("q10", "Have you ever had any chemical services done to your hair? (This includes bleaching, coloring, perms, and hair relaxing.)");
+        questionMap.set("q11", "How often do you bleach your hair?");
+        questionMap.set("q12", "How often do you color your hair?");
+        questionMap.set("q13", "How often do you use heat on your hair? (This includes use of blow dryers, curling irons, curling wands, and straighteners.)");
+        questionMap.set("q14", "Which of the following products do you use regularly? Select all that apply.");
+        questionMap.set("q15", "How often do you submerge your hair in a chlorinated pool?");
+        questionMap.set("q16", "Do you take precautions to prevent chlorine exposure to your hair when swimming? (e.g. leave-in conditioner, swim cap)");
+        questionMap.set("q17", "How often do you wash your hair?");
+        questionMap.set("q18", "How soon after shampooing does your hair become greasy?");
+        questionMap.set("q19", "How often do you wear your hair in a ponytail or bun?");
+        questionMap.set("q20", "How many hours do you spend outside on the average day?");
+        questionMap.set("q21", "How often do you exercise?");
+        questionMap.set("q22", "How greasy is your hair after exercising?");
+        questionMap.set("q23", "How would you describe your diet?");
+        questionMap.set("q24", "Are you currently taking any supplements or medications?");
+
+        for (const key of questionMap.keys()) {
+            // console.log(key);
+            checkboxName = key;
+            let checkBoxValues = fd.getAll(checkboxName)
+
+            // then delete them from the formData object
+            fd.delete(checkboxName);
+
+            // create a string
+            let text = ""
+            if (checkBoxValues) {
+                if (checkBoxValues.length <= 2) {
+                    text = checkBoxValues.join(", ")
+                } else {
+                    let end = checkBoxValues.pop();
+                    text = checkBoxValues.join(", ");
+                    text += ", " + end;
+                }
+            }
+            // add the key/value pair checkboxName/text back to the formData object
+            fd.append(questionMap.get(checkboxName), text);
+        }
+
+        // append the date and time to the formData object
+        // format: mm/dd/yyyy hh:mm:ss
+        let today = new Date();
+        let date = today.getMonth()+1 + '/' + today.getDate() + '/' + today.getFullYear();
+        let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        let dateTime = date + ' ' + time;
+        fd.append("Timestamp", dateTime);
+        
+        fetch(scriptURL, {
+            method: "POST",
+            body: fd
+            })
+            .then(response => {
+                window.location.href='completed.html'
+                // submitForm();
+            })
+            .catch(error => console.error("Error!", error.message))
+        
+        
+        // redirect to completed page
+    })
+
+</script>
+
+</html>
